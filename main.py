@@ -65,7 +65,6 @@ class GitHubCrawler:
         return self.results
 
 
-# Example usage:
 if __name__ == "__main__":
     # Load JSON input file
     file_path = "input.json"
@@ -84,7 +83,7 @@ if __name__ == "__main__":
     input_proxies = json_data.get("proxies", [])
     input_search_type = json_data.get("type", "")
 
-    # Search appropriate results in Github and add them to the dict results
+    # Search appropriate results in GitHub and add them to the dict results
     crawler = GitHubCrawler(input_keywords, input_proxies, input_search_type)
     crawler.search_github()
     results = crawler.get_results()
